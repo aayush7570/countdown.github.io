@@ -1,0 +1,121 @@
+html {
+    background-color: black;
+    height: 100%;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#container {
+    height: 200px;
+    width: 300px;
+    background-color: #F5E4C3;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 120px;
+    border: 5px solid #88B169;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+/*label*/
+
+.label {
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+}
+
+#hour-label {
+    grid-area: 1 / 2 / 1 / 3;
+}
+
+#min-label {
+    grid-area: 1 / 3 / 1 / 4;
+}
+
+#sec-label {
+    grid-area: 1 / 4 / 1 / 5;
+}
+
+
+/*times*/
+
+.time {
+    justify-self: center;
+    align-self: center;
+    border: none;
+    background-color: #ffffff00;
+    font-size: 50px;
+    width: 70px;
+    height: 50px;
+}
+
+#hour {
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+.semicolon {
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+#p1 {
+    grid-area: 2 / 2 / 2 / 4;
+}
+
+#minute {
+    grid-area: 2 / 3 / 2 / 4;
+}
+
+#p2 {
+    grid-area: 2 / 3 / 2 / 5;
+}
+
+#sec {
+    grid-area: 2 / 4 / 2 / 5;
+}
+
+
+/*buttons*/
+
+.btn {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    justify-self: center;
+}
+
+#start {
+    grid-area: 3 / 2 / 3 / 4;
+}
+
+#reset {
+    grid-area: 3 / 3 / 3 / 5;
+}
+
+#container {
+    border-radius: var(--border-width);
+    ;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient( 60deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
